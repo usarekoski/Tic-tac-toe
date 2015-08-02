@@ -1,3 +1,11 @@
+# A simple 2-player text-based Tic-tac-toe game.
+
+# Played on 3x3 grid, players add mark with symbol X or O
+# to the grid in turns until one player gets three symbols in
+# to a row. They can be vertically, horizontally or diagonally.
+# The player who starts second gets one turn after first player
+# gets three in a row and can try to get the game to a draw.
+
 class Game
   require_relative 'player'
   require_relative 'board'
