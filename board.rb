@@ -10,14 +10,18 @@ class Board
     divider = " " + "¤"*11 + "\n"
     row = lambda {|i, j| " " + @board_state.slice(i,j).join(" ¤ ") + " \n" }
 
-
     "  1   2   3\n" + divider + "1" + row.call(0, 3) + divider + "2" \
       + row.call(3, 3) + divider + "3" + row.call(6, 3) + divider
   end
 
-  def update(row, col, player)
+  def update?(row, col, player)
     position = row * 3 + col
-    @board_state[position] = player.symbol
+    if @board_state[position] == "_"
+      @board_state[position] = player.symbol
+      return true
+    else
+      return false
+    end
   end
 
   def player_winning?(player)

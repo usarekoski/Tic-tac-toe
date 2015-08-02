@@ -47,12 +47,15 @@ class Game
 
   def ask_move(player)
     puts "#{player.name}'s (#{player.symbol}) turn "
-    puts "Give coordinates of your next move:"
-    puts "row:"
-    coord_h = get_coord - 1
-    puts "column:"
-    coord_v = get_coord - 1
-    @board.update(coord_h, coord_v, player)
+    loop do
+      puts "Give coordinates of your next move:"
+      puts "row:"
+      coord_h = get_coord - 1
+      puts "column:"
+      coord_v = get_coord - 1
+      break if @board.update?(coord_h, coord_v, player)
+      puts "That square is not empty. Try again."
+    end
   end
 
   def get_coord
