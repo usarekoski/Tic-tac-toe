@@ -10,8 +10,8 @@ class Board
     divider = "¤"*11 + "\n"
     row = lambda {|i, j| " " + @board_state.slice(i,j).join(" ¤ ") + " \n" }
 
-    divider + row.call(0, 3) + divider + row.call(3, 6) \
-    + divider + row.call(6, 9) + divider
+    divider + row.call(0, 3) + divider + row.call(3, 3) \
+    + divider + row.call(6, 3) + divider
   end
 
   def update(row, col, player)
