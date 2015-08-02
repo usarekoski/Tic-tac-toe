@@ -1,3 +1,4 @@
+# Represents players, which have a name and a symbol.
 class Player
 
   attr_reader :name, :symbol
