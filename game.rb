@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby
+
 # A simple 2-player text-based Tic-tac-toe game.
 
 # Played on 3x3 grid, players add mark with symbol X or O
