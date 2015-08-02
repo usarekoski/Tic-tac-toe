@@ -49,9 +49,9 @@ class Game
     puts "#{player.name}'s (#{player.symbol}) turn "
     puts "Give coordinates of your next move:"
     puts "row:"
-    coord_v = get_coord - 1
-    puts "column:"
     coord_h = get_coord - 1
+    puts "column:"
+    coord_v = get_coord - 1
     @board.update(coord_h, coord_v, player)
   end
 
