@@ -12,14 +12,14 @@ class Game
   require_relative 'player'
   require_relative 'board'
 
-  def initialize
+  def initialize(play)
     @board = Board.new
-    welcome
-    create_players
-    play
+    if play == true
+      welcome
+      create_players
+      play
+    end
   end
-
-  private
 
   def welcome
     puts " " * 5 + "Tic-tac-toe"
@@ -89,6 +89,6 @@ class Game
 end
 
 if $0 == __FILE__
-  Game.new
+  Game.new(true)
 end
 
